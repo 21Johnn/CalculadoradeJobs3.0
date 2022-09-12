@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Calculator</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css"/>
+
+    <!--bootstrap-->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!--Txt Animation-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+</head>
+<body>
+    <div class="main--content">
+        <!--seção imagem-->
+        <div class="window--img">
+            <div class="main--img">
+              <img src="./img/development.png" alt="" />
+            </div>
+            <div class="social--icons">
+              <a href="https://www.linkedin.com/in/jonata-ferreira-04b6b323a/" target="blank"><img src="./img/linkedin.png" alt="" /></a>
+              <a href="https://github.com/21Johnn" target="blank"><img src="./img/github.png" alt="" /></a>
+              <a href="https://www.instagram.com/futurodevjohn/" target="blank"><img src="./img/instagram.png" alt="" /></a>
+            </div>
+    
+            <div class="canvas">
+              <button
+                class="btn btn-success"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+              >
+                COMO PREENCHER?
+              </button>
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel"
+              >
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                    Como a calculadora funciona?
+                  </h5>
+    
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p>
+                    O cálculo é baseado em quanto tempo você vai se dedicar em um
+                    projeto durante o dia, e em quantos dias no mês, além disso, é
+                    também considerado seus custos fixos e custos de equipamentos.
+                    Ao final você terá um calculo de quanto cobrar por hora, já com
+                    a margem de lucro escolhida. Ou seja, se sua hora sair a R$50, e
+                    você escolher 50% de margem de lucro, R$25 serão para cobrir
+                    suas despesas, e R$25 será seu lucro.
+                  </p>
+    
+                  <p class="h6">Como saber quanto tempo vou levar em um projeto?</p>
+    
+                  <p>
+                    Essa pergunta, só se responde com a prática, só praticando você
+                    irá começar a entender quanto tempo leva para um projeto ser
+                    finalizado. Mas lembre-se imprevistos acontecem, então conte com
+                    isso, e sempre calcule um tempo a mais. Isso é importante para
+                    você não sair no prejuízo, e seu cliente não ter incomodo com
+                    atrasos.
+                  </p>
+    
+                  <p class="h6">
+                    Como funciona o calculo dos equipamentos/Software?
+                  </p>
+    
+                  <p>
+                    No campo de valor dos equipamentos você deve digitar a somatória
+                    de todos os seus gastos com equipamentos, independente de já
+                    estarem pagos. O calculo leva em consideração que seu
+                    equipamento deve se pagar ao decorrer do próximo ano de
+                    trabalho, divindo o total em 12x.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!--FORMULARIO-->
+
+          <div class="form--style">
+            <div class="head--text">
+              <p class="h1 mb-0 title--1">CALCULADORA DE JOB'S</p>
+              <p class="h4 me-0 subtitle">Calcule sua hora de trabalho</p>
+            </div>
+            <form action="">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Quantas horas irá dedicar ao projeto diariamente?</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="dayTime"
+                  placeholder="Digite aqui"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Quantos dias você trabalha ao decorrer de um mês?</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="dayMonth"
+                  placeholder="Digite aqui"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Qual valor das suas despesas fixas mensais (total)?</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="spends"
+                  placeholder="Água, Luz, alimentação, etc..."
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Qual valor total gasto com equipamentos?
+                </label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="equipament"
+                  placeholder="Digite aqui"
+                  required
+                />
+                <br />
+                <figure class="text-start">
+                  <figcaption class="blockquote-footer">
+                    Considere o valor gasto com:
+                    <cite title="Source Title"
+                      >PC, Software, hospedagem, etc...</cite
+                    >
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="mb-3">
+                <label for="validationCustom04" class="form-label"
+                  >Qual a porcentagem de lucro, que você deseja ter em cima da hora
+                  de trabalho?</label
+                >
+                <select class="form-select" id="percent" required>
+                  <option disabled value="">Selecione uma opção</option>
+                  <option selected>30</option>
+                  <option>40</option>
+                  <option>50</option>
+                </select>
+              </div>
+              <div class=" button--align">
+                <button
+                  type="submit"
+                  class="btn btn-outline-success btn-lg"
+                  onclick="total(event)"
+                  id="showElements"
+                >
+                  CALCULAR AGORA
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+    
+        <div class="opacity hidden--elements" id="hidden">
+          <div class="hidden" data-aos="zoom-in">
+            <div class="results">
+              <p class="h2 result--tittle">AQUI ESTÁ SEU CALCULO</p>
+              <div class="resultado" id="resultado"></div>
+            </div>
+            <div class="previous">
+              <button
+                type="button"
+                class="btn btn-outline-success"
+                id="hidder"
+                onclick="esconder()"
+              >
+                VOLTAR
+              </button>
+            </div>
+          </div>         
+    </div>
+
+     <!--ALERTA-->
+
+     <div class="error--alert hidden--elements " id="error--alert">
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+          <symbol
+            id="exclamation-triangle-fill"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+            />
+          </symbol>
+        </svg>
+        <div class="alert alert-danger d-flex align-items-center" role="alert">
+          <svg
+            class="bi flex-shrink-0 me-2"
+            width="24"
+            height="24"
+            role="img"
+            aria-label="Danger:"
+          >
+            <use xlink:href="#exclamation-triangle-fill" />
+          </svg>
+          <div>VOCÊ DEVE PREENCHER TODOS OS CAMPOS</div>
+        </div>
+      </div>
+
+    <!-- JavaScript Bundle Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--script calculadora-->
+    <script src="./scripts/calculator.js"></script>
+    <script src="./scripts/hidden.js"></script>
+
+    <!--TXT ANIMATION-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+</body>
+</html>
